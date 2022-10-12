@@ -18,11 +18,13 @@ export class GameOfLife {
     this.rules = rules;
   }
 
+  toggleLivingStatus = () => {};
+
   populateCells = () => {
     for (let i = 0; i < this.rows; i++) {
       this.cells[i] = [];
       for (let j = 0; j < this.columns; j++) {
-        this.cells[i][j] = new Cell();
+        this.cells[i][j] = new Cell(this.rules);
       }
     }
   };
