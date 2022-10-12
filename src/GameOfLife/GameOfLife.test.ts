@@ -1,3 +1,4 @@
+import { Cell } from "./Cell/Cell";
 import { GameOfLife } from "./GameOfLife";
 import { ILifeRule } from "./Rules/ILifeRule";
 
@@ -14,7 +15,7 @@ describe("GameOfLife", () => {
 
     game.cells.forEach((column) => {
       column.forEach((row) => {
-        numberOfCells++;
+        if (row instanceof Cell) numberOfCells++;
       });
     });
     expect(numberOfCells).toBe(4);
