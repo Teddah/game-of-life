@@ -59,7 +59,7 @@ function App() {
   const startGame = () => {
     setIsRunning(true);
     setGameState((prev) => {
-      prev.game.computeNextGeneration2();
+      prev.game.computeNextGeneration();
       return { ...prev };
     });
   };

@@ -136,7 +136,7 @@ describe("GameOfLife", () => {
     gameOfLife.computeNextGeneration();
 
     expect(gameOfLife.cells[2][4].isAlive()).toBe(true);
-    expect(gameOfLife.cells[2][3].isAlive()).toBe(false);
+    expect(gameOfLife.cells[2][3].isAlive()).toBe(true);
     expect(gameOfLife.cells[1][3].isAlive()).toBe(true);
   });
 });

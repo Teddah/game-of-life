@@ -11,7 +11,7 @@ const Indicator: React.FunctionComponent<IndicatorInputProps> = ({
 }) => {
   return (
     <div className="indicator-container">
-      <div>Game is running</div>
+      <div>Game is running:</div>
       <div
         className={`running-indicator ${
           isRunning ? "running" : "notRunning"

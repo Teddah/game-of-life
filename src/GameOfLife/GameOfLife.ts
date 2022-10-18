@@ -53,27 +53,9 @@ export class GameOfLife {
   computeNextGeneration = () => {
     const nextGeneration: Cell[][] = [];
 
-    for (let x = 0; x < this.rows; x++) {
-      nextGeneration[x] = [];
-
-      for (let y = 0; y < this.columns; y++) {
-        let newCell = this.applyRules(
-          this.cells[x][y],
-          this.countAliveNeighboursFromPosition(x, y)
-        );
-        nextGeneration[x][y] = newCell;
-      }
-    }
-    this.cells = nextGeneration;
-  };
-
-  computeNextGeneration2 = () => {
-    const nextGeneration: Array<Array<Cell>> = [];
-
     for (let row = 0; row < this.rows; row++) {
       nextGeneration[row] = [];
       for (let column = 0; column < this.columns; column++) {
-        // Ge en ny cell baserat på de regler vi har
         const newCell = this.getCellForNextGeneration(
           this.countAliveNeighboursFromPosition(row, column),
           this.cells[row][column].isAlive()
