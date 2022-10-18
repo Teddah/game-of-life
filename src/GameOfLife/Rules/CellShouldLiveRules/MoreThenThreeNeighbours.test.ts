@@ -4,7 +4,6 @@ import { MoreThenThreeNeighbours } from "./MoreThenThreeNeighbours";
 describe("MoreThenThreeNeighbours rule", () => {
   let rule: ILifeRule;
   const scenarios: [boolean, number][] = [
-    [true, 0],
     [true, 1],
     [true, 2],
     [true, 3],
@@ -19,8 +18,8 @@ describe("MoreThenThreeNeighbours rule", () => {
 
   test.each(scenarios)(
     "Should return %p if there are %s neighbours",
-    (expected, input) => {
-      expect(rule.shouldLive(input)).toBe(expected);
+    (expected, numberOfNeighbours) => {
+      expect(rule.shouldLive(numberOfNeighbours)).toBe(expected);
     }
   );
 

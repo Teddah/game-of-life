@@ -2,7 +2,7 @@ import { ILifeRule } from "../Rules/ILifeRule";
 import { Cell } from "./Cell";
 
 describe("Cells in GameOfLife", () => {
-  const rules: Array<ILifeRule> = [];
+  const rules: ILifeRule[] = [];
   test("A Cells initial livingstatus should be dead/false", () => {
     const cell = new Cell(rules);
 
