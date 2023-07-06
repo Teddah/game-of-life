@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(31, 30, 30);
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:aliceblue;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:aliceblue;
+  background-color: rgb(84, 87, 90);
+  padding: 8px 15px;
+}
+
+.indicator-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.running-indicator {
+  display: flex;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  margin-top: 5px;
+
+}
+
+.notRunning {
+  background-color: red;
+}
+.running {
+  background-color: green;
+}
